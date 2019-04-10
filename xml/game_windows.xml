@@ -1,19 +1,40 @@
 <root>
     <windowclass name="game_main_window">
-        <frame>charsheet</frame>
+        <frame>recordsheet</frame>
+        <placement>
+            <size width="350" height="200" />
+        </placement>
         <sizelimits>
-            <minimum width="450" height="570" />
+            <minimum width="300" height="300" />
             <dynamic />
         </sizelimits>
+        <minimize>minimized_reference</minimize> 
+        <tooltip field="name" />
         <softclose />
         <nodelete />
+        <playercontrol />
+
+      <script>
+        function onLockChanged()
+        if header.subwindow then
+        header.subwindow.update();
+        end
+
+        local bReadOnly = WindowManager.getReadOnlyState(getDatabaseNode());
+        text.setReadOnly(bReadOnly);
+        end
+      </script>
+      
+      
         <sheetdata>
-            <windowtitlebar name="title">
+          <!-- 
+          <windowtitlebar name="title">
                 <resource>games_main_title</resource>
-            </windowtitlebar>
-
-            <anchor_title_charselect name="contentanchor" />
-
+          </windowtitlebar>
+         
+          <anchor_title_charselect name="contentanchor" />
+          -->
+   
             <windowlist name="list">
                 <anchored to="contentanchor" position="below">
                     <bottom parent="" offset="-55" />
@@ -21,14 +42,17 @@
                 <class>game_select_window</class>
                 <columns width="300" fillwidth="true" />
             </windowlist>
-
+          
+          
             <scrollbar_list />
 
             <close_charselect name="close_charselect" />
             <resize_charselect name="resize_charselect" />
-        </sheetdata>
-    </windowclass>
 
+          
+          </sheetdata>
+    </windowclass>
+  
     <windowclass name="game_select_window">
         <frame>storybox</frame>
         <sizelimits>
@@ -88,4 +112,5 @@
             </buttoncontrol>
         </sheetdata>
     </windowclass>
+    
 </root>

@@ -1,12 +1,15 @@
-function getTestWindow()
-    return "game_main_window"
-end
+--
+--function getTestWindow()
+--    return "game_main_window"
+--end
+--
 
 aRecords = {
     ["testData"] = {
         aDataMap = { "test"},
         aDisplayIcon = {"button_test_icon","button_test_icon_down"},
-        fGetLink = getTestWindow
+        sRecordDisplayClass = "game_main_window",
+		--fGetLink = getTestWindow
     }
 }
 

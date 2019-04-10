@@ -10,12 +10,12 @@
         <icon file="graphics/hor-icon.png" name="button_test_icon" />
         <icon file="graphics/vertical-icon.png" name="button_test_icon_down" />
 
-        <string name="library_recordtype_label_testData">TEST</string>
-        <string name="library_recordtype_empty_testData">&#171; TEST 2 &#187;</string>
+        <string name="library_recordtype_label_testData">Tavern Games!</string>
+        <string name="library_recordtype_empty_testData">&#171; Tavern Games! &#187;</string>
         <script name="LibManager" file="lua/data_library.lua" />
         
         <includefile source="xml/strings.xml" />
-        <includefile source="xml/template_windows.xml" />
+       <!-- <includefile source="xml/template_windows.xml" /> -->
         <includefile source="xml/game_windows.xml" />
     </base>
 </root>
