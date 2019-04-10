@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<root>
+
+	<template name="windowtitlebar">
+		<genericcontrol>
+			<bounds>0,0,-1,40</bounds>
+			<frame name="windowtitle" offset="30,0,30,0" />
+			<font>windowtitle</font>
+			<parameters>
+				<windowmargin>60</windowmargin>
+				<controly>0</controly>
+				<controlheight>40</controlheight>
+				<minwidth>100</minwidth>
+			</parameters>
+			<script file="lua/windowtitlebar.lua" />
+		</genericcontrol>
+	</template>
+
+</root>

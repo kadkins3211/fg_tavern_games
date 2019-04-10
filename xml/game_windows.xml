@@ -1,0 +1,91 @@
+<root>
+    <windowclass name="game_main_window">
+        <frame>charsheet</frame>
+        <sizelimits>
+            <minimum width="450" height="570" />
+            <dynamic />
+        </sizelimits>
+        <softclose />
+        <nodelete />
+        <sheetdata>
+            <windowtitlebar name="title">
+                <resource>games_main_title</resource>
+            </windowtitlebar>
+
+            <anchor_title_charselect name="contentanchor" />
+
+            <windowlist name="list">
+                <anchored to="contentanchor" position="below">
+                    <bottom parent="" offset="-55" />
+                </anchored>
+                <class>game_select_window</class>
+                <columns width="300" fillwidth="true" />
+            </windowlist>
+
+            <scrollbar_list />
+
+            <close_charselect name="close_charselect" />
+            <resize_charselect name="resize_charselect" />
+        </sheetdata>
+    </windowclass>
+
+    <windowclass name="game_select_window">
+        <frame>storybox</frame>
+        <sizelimits>
+            <dynamic />
+        </sizelimits>
+        <sheetdata>
+            <genericcontrol name="portraitbase">
+                <bounds>10,10,72,72</bounds>
+                <disabled />
+                <icon>charlist_base</icon>
+            </genericcontrol>
+            <genericcontrol name="portrait">
+                <bounds>10,10,72,72</bounds>
+                <disabled />
+            </genericcontrol>
+
+            <stringfield name="name">
+                <anchored position="insidetopleft" offset="90,20">
+                    <right offset="-40" />
+                </anchored>
+                <multilinespacing>20</multilinespacing>
+                <font>charselecttitle</font>
+                <empty textres="library_recordtype_empty_charsheet" />
+                <disabled />
+            </stringfield>
+            <stringcontrol name="details">
+                <anchored to="name" position="belowleft">
+                    <right />
+                </anchored>
+                <multilinespacing>20</multilinespacing>
+                <font>charselectbody</font>
+                <disabled />
+            </stringcontrol>
+            <stringcontrol name="owner">
+                <anchored to="details" position="belowleft">
+                    <right />
+                </anchored>
+                <multilinespacing>20</multilinespacing>
+                <font>charselecttitle</font>
+                <disabled />
+            </stringcontrol>
+
+            <buttoncontrol name="base">
+                <anchored position="insidetopleft">
+                    <right />
+                    <bottom parent="owner" offset="12" />
+                </anchored>
+                <script>
+					function onButtonPress()
+
+					end
+
+					function onDragStart(button, x, y, draginfo)
+
+					end
+                </script>
+            </buttoncontrol>
+        </sheetdata>
+    </windowclass>
+</root>

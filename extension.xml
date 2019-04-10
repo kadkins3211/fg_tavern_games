@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- This is our MVP for the Extension Tutorial -->
+<root release="3.0" version="3">
+    <properties>
+        <name>Tavern Games Extension</name>
+        <version>0.0.1</version>
+    </properties>
+    <base>
+        <icon file="graphics/hor-icon.png" name="icon_header_hor" />
+        <icon file="graphics/hor-icon.png" name="button_test_icon" />
+        <icon file="graphics/vertical-icon.png" name="button_test_icon_down" />
+
+        <string name="library_recordtype_label_testData">TEST</string>
+        <string name="library_recordtype_empty_testData">&#171; TEST 2 &#187;</string>
+        <script name="LibManager" file="lua/data_library.lua" />
+        
+        <includefile source="xml/strings.xml" />
+        <includefile source="xml/template_windows.xml" />
+        <includefile source="xml/game_windows.xml" />
+    </base>
+</root>
